@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restoran ŠTAB – Zemun</title>
+    <meta name="description" content="Restoran ŠTAB, Novogradska 61, Zemun. Doručak, paste, pizza, roštilj i deserti – svaki dan od 08 do 24h.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Laravel: href="{{ asset('css/style.css') }}" -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+    <div class="container header__inner">
+        <a href="#top" class="logo">ŠTAB<small>restoran · zemun</small></a>
+
+        <nav class="nav" id="nav" aria-label="Glavna navigacija">
+            <a href="#o-nama">O nama</a>
+            <a href="#meni">Meni</a>
+            <a href="#galerija">Galerija</a>
+            <a href="#kontakt">Kontakt</a>
+            <a href="#dostava" class="btn btn--ghost btn--small">Poruči online</a>
+            <a href="#kontakt" class="btn btn--small">Rezerviši sto</a>
+        </nav>
+
+        <button class="burger" id="burger" aria-label="Otvori meni" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+        <!-- Zameniti pravom fotografijom: u CSS-u .hero__bg → background-image: url('../images/hero.jpg') -->
+        <div class="hero__bg"></div>
+
+        <div class="container hero__content">
+            <div class="hero__text">
+                <span class="eyebrow">Novogradska 61 · Zemun</span>
+                <h1>Dobra hrana,<br><em>pravo društvo.</em></h1>
+                <p>Od jutarnje kafe i doručka do kasne večere. Paste, pizza, roštilj i domaći deserti, svaki dan do ponoći.</p>
+                <div class="hero__actions">
+                    <a href="#meni" class="btn">Pogledaj meni</a>
+                    <a href="#kontakt" class="btn btn--ghost">Rezerviši sto</a>
+                </div>
+            </div>
+
+            <!-- Rotirajući pečat -->
+            <div class="stamp" aria-hidden="true">
+                <svg viewBox="0 0 120 120">
+                    <defs><path id="circ" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs>
+                    <text><textPath href="#circ" textLength="290" lengthAdjust="spacing">DOBRA HRANA • PRAVO DRUŠTVO • </textPath></text>
+                </svg>
+                <span>Š</span>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="hero__info">
+                <div>
+                    <small>Radno vreme</small>
+                    <strong>Svaki dan 08–24h</strong>
+                </div>
+                <div>
+                    <small>Dostava</small>
+                    <strong>Svaki dan 09–22h</strong>
+                </div>
+                <div>
+                    <small>Rezervacije</small>
+                    <strong><a href="tel:+381654545457">065/45-45-457</a></strong>
+                </div>
+                <div class="status">
+                    <span class="status-dot" id="statusDot"></span>
+                    <strong id="statusText">Otvoreno</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TRAKA ============ -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+            <span>Doručak</span><span>Paste</span><span>Rižoto</span><span>Pizza</span><span>Roštilj</span><span>Riba</span><span>Deserti</span>
+            <span>Doručak</span><span>Paste</span><span>Rižoto</span><span>Pizza</span><span>Roštilj</span><span>Riba</span><span>Deserti</span>
+        </div>
+    </div>
+
+    <!-- ============ O NAMA ============ -->
+    <section class="section" id="o-nama">
+        <div class="container about">
+            <div class="about__images reveal">
+                <div class="photo about__img about__img--1"><span>Enterijer</span></div>
+                <div class="photo about__img about__img--2"><span>Jelo</span></div>
+            </div>
+
+            <div class="about__text reveal">
+                <span class="eyebrow">O nama</span>
+                <h2>Svaka dobra priča ima svoj <em>štab</em>.</h2>
+                <p>Kod nas se dan ne završava posle ručka. Ovde možeš da počneš jutro uz doručak, da svratiš na ručak sa kolegama, a veče da produžiš uz dobru večeru i društvo.</p>
+                <p>Kuvamo jednostavno i sa pažnjom: sveže paste, pizze iz peći, roštilj i ribu, a za kraj nešto slatko.</p>
+
+                <ul class="facts">
+                    <li><strong>08–24</strong><span>otvoreni svaki dan</span></li>
+                    <li><strong>3 obroka</strong><span>doručak, ručak, večera</span></li>
+                    <li><strong>Dostava</strong><span>i online porudžbina</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PREPORUKE ============ -->
+    <section class="section section--alt">
+        <div class="container">
+            <div class="section__head reveal">
+                <span class="eyebrow">Iz naše kuhinje</span>
+                <h2>Šta se <em>najviše</em> naručuje</h2>
+            </div>
+
+            <!-- Prave fotografije: <img src="images/dish-1.jpg" alt="..."> unutar .photo -->
+            <div class="dishes">
+                <article class="dish-card reveal">
+                    <div class="photo"><span>Foto jela</span></div>
+                    <div class="dish-card__body">
+                        <h3>Pasta sa tartufima</h3>
+                        <p>Kremasti sos, parmezan, tartuf.</p>
+                        <span class="price">od 1.300 RSD</span>
+                    </div>
+                </article>
+                <article class="dish-card reveal">
+                    <div class="photo"><span>Foto jela</span></div>
+                    <div class="dish-card__body">
+                        <h3>Losos na žaru</h3>
+                        <p>Sa sezonskim povrćem i limunom.</p>
+                        <span class="price">od 2.100 RSD</span>
+                    </div>
+                </article>
+                <article class="dish-card reveal">
+                    <div class="photo"><span>Foto jela</span></div>
+                    <div class="dish-card__body">
+                        <h3>Pizza Capricciosa</h3>
+                        <p>Iz peći, tanko testo, šunka i pečurke.</p>
+                        <span class="price">od 1.250 RSD</span>
+                    </div>
+                </article>
+                <article class="dish-card reveal">
+                    <div class="photo"><span>Foto jela</span></div>
+                    <div class="dish-card__body">
+                        <h3>Burger sa govedinom</h3>
+                        <p>Sočan burger uz domaći prilog.</p>
+                        <span class="price">od 1.150 RSD</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ MENI ============ -->
+    <section class="section" id="meni">
+        <div class="container">
+            <div class="section__head reveal">
+                <span class="eyebrow">Jelovnik</span>
+                <h2>Pogledaj šta <em>kuvamo</em></h2>
+            </div>
+
+            <div class="tabs reveal" role="tablist">
+                <button class="tab is-active" data-tab="dorucak" role="tab">Doručak</button>
+                <button class="tab" data-tab="predjela" role="tab">Predjela i salate</button>
+                <button class="tab" data-tab="paste" role="tab">Paste i rižoto</button>
+                <button class="tab" data-tab="pizza" role="tab">Pizza</button>
+                <button class="tab" data-tab="glavna" role="tab">Glavna jela</button>
+                <button class="tab" data-tab="deserti" role="tab">Deserti</button>
+                <button class="tab" data-tab="pica" role="tab">Pića</button>
+            </div>
+
+            <!-- Laravel: ovde kasnije @foreach($items as $item) iz baze. Cene su orijentacione. -->
+            <ul class="menu is-active" data-panel="dorucak">
+                <li class="dish"><div class="dish__row"><h4>Ovsena kaša sa voćem</h4><span class="dish__dots"></span><span class="dish__price">600</span></div><p>Sezonsko voće, med, orasi</p></li>
+                <li class="dish"><div class="dish__row"><h4>Punjene palačinke</h4><span class="dish__dots"></span><span class="dish__price">850</span></div><p>Slano ili slatko, po izboru</p></li>
+                <li class="dish"><div class="dish__row"><h4>Grilovani sendvič sa slaninom</h4><span class="dish__dots"></span><span class="dish__price">850</span></div><p>Sir, slanina, jaje</p></li>
+                <li class="dish"><div class="dish__row"><h4>Omlet sa povrćem</h4><span class="dish__dots"></span><span class="dish__price">650</span></div><p>Tri jajeta, sezonsko povrće</p></li>
+            </ul>
+
+            <ul class="menu" data-panel="predjela">
+                <li class="dish"><div class="dish__row"><h4>Bruskete</h4><span class="dish__dots"></span><span class="dish__price">500</span></div><p>Paradajz, bosiljak, maslinovo ulje</p></li>
+                <li class="dish"><div class="dish__row"><h4>Grilovani kozji sir</h4><span class="dish__dots"></span><span class="dish__price">1.150</span></div><p>Sa medom i orasima</p></li>
+                <li class="dish"><div class="dish__row"><h4>Cezar salata</h4><span class="dish__dots"></span><span class="dish__price">1.200</span></div><p>Piletina, parmezan, krutoni</p></li>
+                <li class="dish"><div class="dish__row"><h4>Salata sa lososom</h4><span class="dish__dots"></span><span class="dish__price">1.300</span></div><p>Mešano zelenje, avokado, limun</p></li>
+            </ul>
+
+            <ul class="menu" data-panel="paste">
+                <li class="dish"><div class="dish__row"><h4>Carbonara</h4><span class="dish__dots"></span><span class="dish__price">1.100</span></div><p>Pancheta, jaje, pecorino</p></li>
+                <li class="dish"><div class="dish__row"><h4>Pasta sa tartufima</h4><span class="dish__dots"></span><span class="dish__price">1.300</span></div><p>Kremasti sos, parmezan</p></li>
+                <li class="dish"><div class="dish__row"><h4>Rižoto sa pečurkama</h4><span class="dish__dots"></span><span class="dish__price">1.050</span></div><p>Šampinjoni, parmezan, peršun</p></li>
+                <li class="dish"><div class="dish__row"><h4>Pasta sa piletinom</h4><span class="dish__dots"></span><span class="dish__price">1.150</span></div><p>Pileće belo, pesto, sveži paradajz</p></li>
+            </ul>
+
+            <ul class="menu" data-panel="pizza">
+                <li class="dish"><div class="dish__row"><h4>Margherita</h4><span class="dish__dots"></span><span class="dish__price">1.060</span></div><p>Paradajz sos, mocarela, bosiljak</p></li>
+                <li class="dish"><div class="dish__row"><h4>Capricciosa</h4><span class="dish__dots"></span><span class="dish__price">1.250</span></div><p>Šunka, pečurke, mocarela</p></li>
+                <li class="dish"><div class="dish__row"><h4>Quattro formaggi</h4><span class="dish__dots"></span><span class="dish__price">1.380</span></div><p>Četiri vrste sira</p></li>
+                <li class="dish"><div class="dish__row"><h4>Diavola</h4><span class="dish__dots"></span><span class="dish__price">1.300</span></div><p>Ljuta kobasica, mocarela, čili</p></li>
+            </ul>
+
+            <ul class="menu" data-panel="glavna">
+                <li class="dish"><div class="dish__row"><h4>Burger sa govedinom</h4><span class="dish__dots"></span><span class="dish__price">1.150</span></div><p>Uz pomfrit i salatu</p></li>
+                <li class="dish"><div class="dish__row"><h4>Pileće belo sa povrćem</h4><span class="dish__dots"></span><span class="dish__price">1.050</span></div><p>Sa žara, sezonski prilog</p></li>
+                <li class="dish"><div class="dish__row"><h4>Ćureći file</h4><span class="dish__dots"></span><span class="dish__price">1.250</span></div><p>Sa žara, pire krompir</p></li>
+                <li class="dish"><div class="dish__row"><h4>Losos na žaru</h4><span class="dish__dots"></span><span class="dish__price">2.100</span></div><p>Povrće sa grila, limun</p></li>
+            </ul>
+
+            <ul class="menu" data-panel="deserti">
+                <li class="dish"><div class="dish__row"><h4>Palačinke sa Nutellom</h4><span class="dish__dots"></span><span class="dish__price">600</span></div><p>Orasi, banana</p></li>
+                <li class="dish"><div class="dish__row"><h4>Čizkejk</h4><span class="dish__dots"></span><span class="dish__price">780</span></div><p>Sos od šumskog voća</p></li>
+                <li class="dish"><div class="dish__row"><h4>Tiramisu</h4><span class="dish__dots"></span><span class="dish__price">830</span></div><p>Po domaćem receptu</p></li>
+                <li class="dish"><div class="dish__row"><h4>Voćna salata</h4><span class="dish__dots"></span><span class="dish__price">650</span></div><p>Sezonsko voće, mente</p></li>
+            </ul>
+
+            <ul class="menu" data-panel="pica">
+                <li class="dish"><div class="dish__row"><h4>Espreso</h4><span class="dish__dots"></span><span class="dish__price">190</span></div><p>Dupli ili obični</p></li>
+                <li class="dish"><div class="dish__row"><h4>Kapućino</h4><span class="dish__dots"></span><span class="dish__price">250</span></div><p>Espreso, mleko, pena</p></li>
+                <li class="dish"><div class="dish__row"><h4>Domaća limunada</h4><span class="dish__dots"></span><span class="dish__price">300</span></div><p>Sa nanom</p></li>
+                <li class="dish"><div class="dish__row"><h4>Ledeni čaj</h4><span class="dish__dots"></span><span class="dish__price">250</span></div><p>Breskva ili limun</p></li>
+            </ul>
+
+            <p class="menu__note">Cene su u dinarima i orijentacione. <a href="#">Pogledaj ceo jelovnik (PDF)</a></p>
+        </div>
+    </section>
+
+    <!-- ============ DOSTAVA ============ -->
+    <section class="delivery" id="dostava">
+        <div class="container delivery__inner reveal">
+            <div>
+                <span class="eyebrow eyebrow--light">Dostava</span>
+                <h2>Ne možeš da svratiš? <em>Donosimo do tebe.</em></h2>
+                <p>Poruči online ili pozovi, dostavljamo svaki dan od 09 do 22h.</p>
+            </div>
+            <div class="delivery__actions">
+                <!-- Povezati sa pravim linkom za online porudžbinu -->
+                <a href="#" class="btn btn--light">Poruči online</a>
+                <a href="tel:+381654545457" class="btn btn--ghost">065/45-45-457</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ GALERIJA ============ -->
+    <section class="section" id="galerija">
+        <div class="container">
+            <div class="section__head reveal">
+                <span class="eyebrow">Galerija</span>
+                <h2>Atmosfera <em>u kadru</em></h2>
+            </div>
+            <div class="gallery reveal">
+                <div class="photo gallery__item gallery__item--tall"><span>Foto</span></div>
+                <div class="photo gallery__item"><span>Foto</span></div>
+                <div class="photo gallery__item"><span>Foto</span></div>
+                <div class="photo gallery__item gallery__item--tall"><span>Foto</span></div>
+                <div class="photo gallery__item gallery__item--wide"><span>Foto</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ UTISCI ============ -->
+    <!-- Primeri tekstova: zameniti pravim utiscima gostiju -->
+    <section class="section section--alt" id="utisci">
+        <div class="container">
+            <div class="section__head reveal">
+                <span class="eyebrow">Utisci gostiju</span>
+                <h2>Šta kažu <em>naši gosti</em></h2>
+            </div>
+            <div class="reviews">
+                <blockquote class="review reveal">
+                    <p>Odlična pizza i ljubazno osoblje. Svratimo svaki put kad smo u Zemunu.</p>
+                    <footer>— Marija S.</footer>
+                </blockquote>
+                <blockquote class="review reveal">
+                    <p>Doručak je pun pogodak, a večernja atmosfera još bolja. Preporuka za sve.</p>
+                    <footer>— Nikola P.</footer>
+                </blockquote>
+                <blockquote class="review reveal">
+                    <p>Losos je bio savršen, a deserti pravi završetak večere.</p>
+                    <footer>— Ana M.</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ KONTAKT ============ -->
+    <section class="section" id="kontakt">
+        <div class="container contact">
+            <div class="contact__info reveal">
+                <span class="eyebrow">Kontakt</span>
+                <h2>Svrati ili <em>rezerviši sto</em></h2>
+
+                <ul class="info-list">
+                    <li><strong>Adresa</strong><span>Novogradska 61, Zemun</span></li>
+                    <li><strong>Telefon</strong><span><a href="tel:+381654545457">065/45-45-457</a></span></li>
+                    <li><strong>Radno vreme</strong><span>Svaki dan 08–24h</span></li>
+                    <li><strong>Dostava</strong><span>Svaki dan 09–22h</span></li>
+                </ul>
+
+                <div class="map photo"><span>Google mapa (iframe)</span></div>
+            </div>
+
+            <!-- Laravel: action="{{ route('reservations.store') }}" method="POST" + @csrf -->
+            <form class="form reveal" id="reservationForm" novalidate>
+                <h3>Rezervacija stola</h3>
+                <div class="form__row">
+                    <label>Ime i prezime<input type="text" name="name" required></label>
+                    <label>Telefon<input type="tel" name="phone" required></label>
+                </div>
+                <div class="form__row">
+                    <label>Datum<input type="date" name="date" required></label>
+                    <label>Vreme<input type="time" name="time" required></label>
+                </div>
+                <label>Broj osoba
+                    <select name="guests">
+                        <option>1–2</option><option>3–4</option><option>5–6</option><option>7–10</option><option>10+</option>
+                    </select>
+                </label>
+                <label>Napomena<textarea name="note" rows="3"></textarea></label>
+                <button type="submit" class="btn btn--block">Pošalji zahtev</button>
+                <p class="form__msg" id="formMsg" role="status"></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <a href="#top" class="logo">ŠTAB<small>restoran · zemun</small></a>
+        <p>© <span id="year"></span> Restoran ŠTAB, Novogradska 61, Zemun</p>
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#dostava">Poruči online</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Laravel: src="{{ asset('js/main.js') }}" -->
+<script src="main.js"></script>
+</body>
+</html>
